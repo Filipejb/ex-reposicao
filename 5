@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int total = 0;
+    int num_pares = 0;
+    
+    for (int i = 2; num_pares < 50; i += 2) {
+        total += i;
+        num_pares++;
+    }
+    
+    printf("A soma dos 50 primeiros numeros pares eh: %d\n", total);
+    
+    return 0;
+}
