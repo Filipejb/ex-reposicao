@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    char sexo, corolhos, corcabelos;
+    int idade;
+    float sal;
+    int numhabit = 0;
+    int numfemcc = 0;
+  float porfemcc 
+
+    do {
+        printf("Informe os dados do habitante %d:\n", numhabit+1);
+        printf("Sexo (m/f): ");
+        scanf(" %c", &sexo);
+        printf("Cor dos olhos (a(azul)/v(verde)/c(castanho)/p(preto)): ");
+        scanf(" %c", &corolhos);
+        printf("Cor dos cabelos (l(loiro)/c(castanho)/p(preto)/r(ruivo)): ");
+        scanf(" %c", &corcabelos);
+        printf("Idade (10 a 100): ");
+        scanf("%d", &idade);
+        printf("Salario: ");
+        scanf("%f", &sal);
+
+        if (sexo == 'm' || sexo == 'f') {
+            if (corolhos == 'a' || corolhos == 'v' || corolhos == 'c' || corolhos == 'p') {
+                if (corcabelos == 'l' || corcabelos == 'c' || corcabelos == 'p' || corcabelos == 'r') {
+                    if (idade >= 10 && idade <= 100) {
+                        if (sal >= 0) {
+                            if (sexo == 'f' && idade >= 18 && idade <= 35 && corolhos == 'c' && corcabelos == 'c') {
+                                numfemcc++;
+                            }
+                            numhabit++;
+                        }
+                    }
+                }
+            }
+        }
+    } while (idade != -1);
+
+     porfemcc = (float) numfemcc / numhabit * 100;
+    printf("\nPorcentagem de habitantes do sexo feminino, com idade entre 18 e 35 anos e que tenham olhos castanhos e cabelos castanhos: %.2f%%\n", porfemcc);
+
+    return 0;
+}
