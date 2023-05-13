@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int main() {
+    int opc, quant;
+    float valor, totcompra = 0;
+
+    do {
+        
+        printf("Escolha a fruta desejada:\n");
+        printf("1 => ABACAXI - 5,00 a unidade\n");
+        printf("2 => MAÇA - 1,00 a unidade\n");
+        printf("3 => PERA - 4,00 a unidade\n");
+        printf("0 => Encerrar compra\n");
+
+       
+        scanf("%d", &opc);
+
+        switch(opc) {
+            case 1:
+               
+                printf("Digite a quantidade desejada: ");
+                scanf("%d", &quant);
+                valor = 5.0 * quant;
+                totcompra += valor;
+                printf("Abacaxi - Quantidade: %d - Valor total: %.2f\n", quant, valor);
+                break;
+
+            case 2:
+                
+                printf("Digite a quantidade desejada: ");
+                scanf("%d", &quant);
+                valor = 1.0 * quant;
+                totcompra += valor;
+                printf("Maçã - Quantidade: %d - Valor total: %.2f\n", quant, valor);
+                break;
+
+            case 3:
+              
+                printf("Digite a quantidade desejada: ");
+                scanf("%d", &quant);
+                valor = 4.0 * quant;
+                totcompra += valor;
+                printf("Pera - Quantidade: %d - Valor total: %.2f\n", quant, valor);
+                break;
+
+            case 0:
+                
+                printf("Valor total da compra: %.2f\n", totcompra);
+                break;
+
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+                break;
+        }
+    } while(opc != 0);
+
+    return 0;
+}
+
